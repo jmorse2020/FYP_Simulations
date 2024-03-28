@@ -294,7 +294,7 @@ class DispersionExtraction():
             GVD.append((2 * wavelengths[i]**3) / ((2 * np.pi * c0)**2) * first_derivative[i] + (wavelengths[i]**4) / ((2 * np.pi * c0)**2) * second_derivative[i])
             # GVD.append(-1 * ((2 * np.pi * c0) / (wavelengths[i]**2)) * ( ( (wavelengths[i]**3) / (2 * np.pi**2 * c0**2) ) * first_derivative[i] + ( (wavelengths[i]**4) / ((2 * np.pi * c0)**2) ) * second_derivative[i] ) )
         if output_ps_nm_km:
-            GVD = np.array(GVD) * 1e15 #24?                                      # Converts from s / nm*nm to ps / nm*km (conventional).             
+            GVD = np.array(GVD) * 1e24 #15?                                      # Converts from s / nm*nm to ps / nm*km (conventional).             
         return GVD
 
     def Vg_lambda(beta, wavelengths):
